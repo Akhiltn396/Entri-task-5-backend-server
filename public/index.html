@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta
+      name="author"
+      content="Mark Otto, Jacob Thornton, and Bootstrap contributors"
+    />
+    <meta name="generator" content="Hugo 0.104.2" />
+    <title>Tech news</title>
+
+    <link
+      rel="canonical"
+      href="https://getbootstrap.com/docs/5.2/examples/carousel/"
+    />
+
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      .b-example-divider {
+        height: 3rem;
+        background-color: rgba(0, 0, 0, 0.1);
+        border: solid rgba(0, 0, 0, 0.15);
+        border-width: 1px 0;
+        box-shadow: inset 0 0.5em 1.5em rgba(0, 0, 0, 0.1),
+          inset 0 0.125em 0.5em rgba(0, 0, 0, 0.15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -0.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+      /* .nav-item{
+        text-align: ;
+      } */
+      .container-fluid > a > span{
+        font-family:'Optima';
+      }
+      .container-fluid > img {
+        margin-left: 40px;
+        width: 10%;
+        height: 10%;
+        border-radius: 20%;
+      }
+      .navbar-nav {
+        margin-right: 70px;
+      }
+      /* .navbar-nav > li {
+        padding-left: 200px;
+      } */
+      .navbar h4 {
+        color: white;
+        padding-right: 500px;
+      }
+      .navbar a span {
+        color: red;
+        font-size: 50px;
+      }
+      #text {
+        font-size: 30px;
+      }
+      .navbar-nav > li {
+        padding-left: 40px;
+      }
+
+      .collapse ul li {
+        text-align: right;
+      }
+
+      .carousel-caption img {
+        position: absolute;
+        bottom: 10px;
+      }
+      .cards {
+        color: black;
+      }
+      .cards p {
+        color: red;
+      }
+      .featurette h2 {
+        color: black;
+      }
+      .featurette p {
+        text-align: justify;
+      }
+      .featurette img {
+        width: 400px;
+        border-style: solid;
+        border-radius: 20px;
+      }
+      @media (max-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+        body {
+          width: 100%;
+        }
+        .navbar {
+          background-color: red;
+        }
+        .container{
+          height: 100%;
+          max-height: 50px;
+        }
+        .container img {
+          width: 100%;
+          max-width: 400px;
+        }
+
+      }
+    </style>
+
+    <!-- Custom styles for this template -->
+    <link href="css/carousel.css" rel="stylesheet" />
+    <link href="css/carousel.rtl.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <div class="container-fluid">
+          <!-- <img src="assets/tech news.png" alt=""> -->
+          <a class="navbar-brand" id="text" href="#">Tech<span>News</span></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarCollapse"
+            aria-controls="navbarCollapse"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="more.html">More</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#myCarousel"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#myCarousel"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#myCarousel"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <svg
+              class="bd-placeholder-img"
+              width="100%"
+              height="100%"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+              preserveAspectRatio="xMidYMid slice"
+              focusable="false"
+            >
+              <rect width="100%" height="100%" fill="#777" />
+            </svg>
+
+            <div class="container">
+              <div class="carousel-caption text-start">
+                <img class="d-block w-100" src="assets/tech news.png" alt="" />
+                <!-- <h1>Example headline.</h1>
+            <p>Some representative placeholder content for the first slide of the carousel.</p> -->
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <svg
+              class="bd-placeholder-img"
+              width="100%"
+              height="100%"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+              preserveAspectRatio="xMidYMid slice"
+              focusable="false"
+            >
+              <rect width="100%" height="100%" fill="#777" />
+            </svg>
+
+            <div class="container">
+              <div class="carousel-caption">
+                <img
+                  class="d-block w-100"
+                  src="assets/Screenshot (611).png"
+                  alt=""
+                />
+                <!-- <h1>Another example headline.</h1>
+            <p>Some representative placeholder content for the second slide of the carousel.</p> -->
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <svg
+              class="bd-placeholder-img"
+              width="100%"
+              height="100%"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+              preserveAspectRatio="xMidYMid slice"
+              focusable="false"
+            >
+              <rect width="100%" height="100%" fill="#777" />
+            </svg>
+
+            <div class="container">
+              <div class="carousel-caption text-end">
+                <img
+                  class="d-block w-100"
+                  src="assets/Screenshot (591).png"
+                  alt=""
+                />
+                <!-- <h1>One more for good measure.</h1>
+            <p>Some representative placeholder content for the third slide of this carousel.</p> -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#myCarousel"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#myCarousel"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+      <!-- Marketing messaging and featurettes
+  ================================================== -->
+      <!-- Wrap the rest of the page in another container to center all the content. -->
+
+      <div class="container marketing">
+        <!-- Three columns of text below the carousel -->
+        <div class="row">
+          <div class="cards col-lg-4">
+            <img
+              class="bd-placeholder-img rounded-circle"
+              width="140"
+              height="140"
+              src="assets/Screenshot (611).png"
+              alt=""
+            />
+
+            <h2 class="fw-normal">5G</h2>
+            <p>iPhone support to 5G live in India</p>
+            <p>
+              <a class="btn btn-secondary" href="more.html"
+                >View details &raquo;</a
+              >
+            </p>
+          </div>
+          <!-- /.col-lg-4 -->
+          <div class="cards col-lg-4">
+            <img
+              class="bd-placeholder-img rounded-circle"
+              width="140"
+              height="140"
+              src="assets/Screenshot (615).png"
+              alt=""
+            />
+
+            <h2 class="fw-normal">AI</h2>
+            <p>
+              Why tech insiders are so excited about ChatGPT, a chatbot that
+              answers questions and writes essays
+            </p>
+            <p>
+              <a class="btn btn-secondary" href="more.html"
+                >View details &raquo;</a
+              >
+            </p>
+          </div>
+          <!-- /.col-lg-4 -->
+          <div class="cards col-lg-4">
+            <img
+              class="bd-placeholder-img rounded-circle"
+              width="140"
+              height="140"
+              src="assets/Screenshot (609).png"
+              alt=""
+            />
+
+            <h2 class="fw-normal">Web Development</h2>
+            <p>Is Web Development a Good Career?</p>
+            <p>
+              <a class="btn btn-secondary" href="#">View details &raquo;</a>
+            </p>
+          </div>
+          <!-- /.col-lg-4 -->
+        </div>
+        <!-- /.row -->
+
+        <!-- START THE FEATURETTES -->
+
+        <hr class="featurette-divider" />
+
+        <div class="row featurette">
+          <div class="">
+            <h2>Twitter's paid blue tick re-launches after pause</h2>
+            <img src="assets/Screenshot (604).png" alt="" />
+            <p>
+              Twitter's paid-for verification feature is rolling out once again
+              on Monday. It was paused last month after being swamped by
+              impersonators. It is still $8 per month - but there is now an
+              increased fee of $11 for those using the Twitter app on Apple
+              devices. Twitter's owner Elon Musk has previously said in tweets
+              that he resents the commission fee Apple charges on in-app
+              purchases. Twitter Blue's additional features include an edit
+              button.
+            </p>
+
+            <p>
+              This has long been a feature requested by many Twitter users,
+              although there are others who argue that it increases the
+              potential for the spread of disinformation, if a tweet is altered
+              after being widely shared. Blue-tick subscribers will also see
+              fewer ads, have their tweets amplified above others, and be able
+              to post and view longer, better quality videos, the platform says.
+            </p>
+          </div>
+        </div>
+
+        <hr class="featurette-divider" />
+
+        <div class="row featurette">
+          <div class="">
+            <h2>
+              Tech layoffs 2022: Another major tech company fires over 4000
+              employees
+            </h2>
+            <img src="assets/Screenshot (607).png" alt="" />
+            <p>
+              The tech industry is going through a tough time right now. Big
+              Tech companies including Meta, Amazon, and Twitter have laid off
+              hundreds and thousands of employees in the last couple of months.
+              Joining the list of tech companies is the networking major Cisco.
+              As per the latest reports, the company has started laying off 5
+              per cent of its workforce. Reports of Cisco considering firing
+              employees surfaced last month. The networking company is said to
+              have laid off around 5 per cent of the workforce, which is over
+              4000 employees. <br />
+            </p>
+            <p>
+              It is said that the layoffs are a part of "rebalancing" act while
+              "rightsizing certain businesses". The report quoted Chuck Robbins,
+              Chairman and CEO of Cisco, who did not divulge into giving direct
+              details related to layoffs but said he would "be reluctant to go
+              into a lot of detail here until we're able to talk to them. I
+              would say that what we're doing is rightsizing certain
+              businesses". "You can just assume that we're going to -- we're not
+              actually -- there's nothing that's a lower priority, but we are
+              rightsizing certain businesses," Robbins further told analysts.
+            </p>
+          </div>
+        </div>
+
+        <hr class="featurette-divider" />
+        <div class="row featurette">
+          <div class="">
+            <h2>Is Web Development a Good Career?</h2>
+            <img src="assets/Screenshot (609).png" alt="" />
+            <p>
+              Mondo’s annual Tech and Digital Marketing Salary guide found “Web
+              Developer” was the most in-demand job title in tech and one of its
+              top-paying jobs. And, according to the U.S. Bureau of Labor, the
+              job market for Web Developers is expected to grow 15 percent by
+              2026.
+            </p>
+            <p>
+              The job outlook for Web Developers as very positive because Web
+              Developers are in high demand across a variety of industries, and
+              a worldwide gap in software and web development skills has most
+              observers forecasting high demand well into the future.
+            </p>
+            <p>
+              The U.S. Bureau of Labor Statistics expects employment of Web
+              Developers to grow eight percent by 2029, much faster than the
+              average for job roles. There is also no sign demand will wane. The
+              expansion of e-commerce — online shopping is now expected to grow
+              faster than the overall retail industry — and an ever-increasing
+              reliance on mobile search will only create further need for
+              talented Web and Software Developers. That means that even if many
+              career changers from other tech disciplines decide they want to
+              become a Web Developer, the job outlook should still remain
+              positive.
+            </p>
+          </div>
+        </div>
+
+        <!-- /END THE FEATURETTES -->
+      </div>
+      <!-- /.container -->
+
+      <!-- FOOTER -->
+      <footer class="container">
+        <p class="float-end"><a href="#">Back to top</a></p>
+        <p>
+          &copy; 2017–2022 Company, Inc. &middot;
+          <a href="#">Privacy</a> &middot; <a href="#">Terms</a>
+        </p>
+      </footer>
+    </main>
+
+    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
